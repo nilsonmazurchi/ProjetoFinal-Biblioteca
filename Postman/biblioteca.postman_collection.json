@@ -242,6 +242,15 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Buscar Todos os Emprestimos em aberto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/emprestimo/abertos"
+					},
+					"response": []
 				}
 			]
 		},

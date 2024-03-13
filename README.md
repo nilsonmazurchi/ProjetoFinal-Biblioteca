@@ -62,21 +62,13 @@ superior a data prevista de retorno com calculo da multa)
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* [Sprig Boot]([http://www.dropwizard.io/1.0.2/docs/](https://spring.io/projects/spring-boot)) - O framework web usado
+* [Sprig Boot]([http://www.dropwizard.io/1.0.2/docs/](https://spring.io/projects/spring-boot) - O framework web usado
 * [Maven](https://maven.apache.org/) - Gerente de Dependência
 * [Postman](https://www.postman.com/) - Usada para testar as rotas
 * [Docker](https://www.docker.com/) - Usada para construir um ambiente para aplicação
 * [PostgreSQL](https://www.postgresql.org/) - Banco de dados
 * [DbGate](https://dbgate.org/) - Usada para Gerenciamento do BD
 * [Docker-Compose](https://docs.docker.com/compose/install/) - Usada para construir um ambiente para aplicação
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
 ## ✒️ Autores
 

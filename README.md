@@ -18,7 +18,7 @@ Ao realizar o clone do repositorio, entre no diretorio biblioteca e execute:
 ```
 docker-compose -f docker-compose.yml up -d
 ```
-O comando acima dev criar um container docker com postgreSQL.
+O comando acima deve criar um container docker com postgreSQL.
 * Certifique-se que o container esta rodando.
 * Em seguida abra o projeto e instale todas as dependencias atraves do Maven.
 * Execute o projeto através da BibliotecaApplication.

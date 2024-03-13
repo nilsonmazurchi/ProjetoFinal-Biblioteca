@@ -18,14 +18,14 @@ Ao realizar o clone do repositorio, entre no diretorio biblioteca e execute:
 ```
 docker-compose -f docker-compose.yml up -d
 ```
-Este criara um container docker com postgreSQL.
-Certifique-se que o container esta rodando.
-Em seguida abra o projeto e instale todas as dependencias atraves do Maven.
-Execute o projeto através da BibliotecaApplication.
-Com o DbGate iremos conectar ao banco de dados criado.
-Em uma pasta do repositorio chamada Postman esta o arquivo(biblioteca.postman_collection.json) com as rotas para testar.
-Importe para seu Postman.
-Terá uma aba chamada biblioteca apos a importação.
+O comando acima dev criar um container docker com postgreSQL.
+* Certifique-se que o container esta rodando.
+* Em seguida abra o projeto e instale todas as dependencias atraves do Maven.
+* Execute o projeto através da BibliotecaApplication.
+* Com o DbGate iremos conectar ao banco de dados criado.
+* Em uma pasta do repositorio chamada Postman esta o arquivo(biblioteca.postman_collection.json) com as rotas para testar.
+* Importe para seu Postman.
+* Terá uma aba chamada biblioteca apos a importação.
 
 ## ⚙️ Executando os testes
 

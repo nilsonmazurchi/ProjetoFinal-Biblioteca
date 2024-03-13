@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "b46c6b26-d827-48e0-9c4c-888e703a3533",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26807852"
+	},
+	"item": [
+		{
+			"name": "Livros",
+			"item": [
+				{
+					"name": "Cadastrar Livros1 Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"A Sutil Arte de Ligar o F*da-Se\",\r\n    \"autor\" : \"Mark Manson\",\r\n    \"ano\": \"2017\",\r\n    \"categoria\": \"Auto-ajuda\",\r\n    \"isbn\": \"978-8551002490\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/livro/novo"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Livro2 Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"F*deu geral\",\r\n    \"autor\" : \"Mark Manson\",\r\n    \"ano\": \"2019\",\r\n    \"categoria\": \"Auto-ajuda\",\r\n    \"isbn\": \"B07QB4119L\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/livro/novo"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os livros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/livro/lista"
+					},
+					"response": []
+				},
+				{
+					"name": "Fazer Update por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"titulo\": \"F*deu geral\",\r\n    \"autor\": \"Mark Manson\",\r\n    \"ano\": \"2019\",\r\n    \"categoria\": \"Auto-ajuda\",\r\n    \"isbn\": \"1111111111\",\r\n    \"emprestado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/livro/atualizar/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/livro/apagar/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Emprestimo",
+			"item": [
+				{
+					"name": "Cadastrar Emprestimo por Dados Form-Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nomeUsuario",
+									"value": "Nilson Mazurchi",
+									"type": "text"
+								},
+								{
+									"key": "emailUsuario",
+									"value": "nil@email.com",
+									"type": "text"
+								},
+								{
+									"key": "senhaUsuario",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "tituloLivro",
+									"value": "A Sutil Arte de Ligar o F*da-Se",
+									"type": "text"
+								},
+								{
+									"key": "autorLivro",
+									"value": "Mark Manson",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/biblioteca/emprestimo/novo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"biblioteca",
+								"emprestimo",
+								"novo"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Livros Disponiveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/livro/disponiveis"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios Com Livros Pendentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/usuario/emprestimos-pendentes"
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"titulo\": \"F*deu geral\",\r\n    \"autor\": \"Mark Manson\",\r\n    \"ano\": \"2019\",\r\n    \"categoria\": \"Auto-ajuda\",\r\n    \"isbn\": \"1111111111\",\r\n    \"emprestado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/desativar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Devolução por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/emprestimo/devolver/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Devolução por ID Data Devolução Digitada",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/biblioteca/emprestimo/devolver/teste/3?dataDevolucao=2024-03-31T00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"biblioteca",
+								"emprestimo",
+								"devolver",
+								"teste",
+								"3"
+							],
+							"query": [
+								{
+									"key": "dataDevolucao",
+									"value": "2024-03-31T00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Cadastrar Usuario Endereco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Nilson Mazurchi\",\r\n  \"email\": \"nil@email.com\",\r\n  \"senha\": \"123456\",\r\n  \"enderecos\": [\r\n    {\r\n      \"cep\": \"13348742\",\r\n      \"rua\": \"Rua Deiz\",\r\n      \"numero\": \"120\",\r\n      \"bairro\": \"Jardim Pedroso\",\r\n      \"cidade\": \"Indaiatuba\",\r\n      \"estado\": \"SP\",\r\n      \"tipo\": \"Secundario\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/novo"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Usuario Endereços",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Renata Ata\",\r\n  \"email\": \"re@email.com\",\r\n  \"senha\": \"123456\",\r\n  \"enderecos\": [\r\n    {\r\n      \"cep\": \"13348742\",\r\n      \"rua\": \"Rua Treze\",\r\n      \"numero\": \"120\",\r\n      \"bairro\": \"Jardim Pedroso\",\r\n      \"cidade\": \"Indaiatuba\",\r\n      \"estado\": \"SP\",\r\n      \"tipo\": \"Secundario\"\r\n    },\r\n    {\r\n      \"cep\": \"13348742\",\r\n      \"rua\": \"Rua Deiz\",\r\n      \"numero\": \"150\",\r\n      \"bairro\": \"Jardim Park Real\",\r\n      \"cidade\": \"Indaiatuba\",\r\n      \"estado\": \"SP\",\r\n      \"tipo\": \"Principal\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/novo"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Usuarios e Endereços",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/usuario/lista"
+					},
+					"response": []
+				},
+				{
+					"name": "Fazer Update Usuario por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Nilson Mazurchi\",\r\n    \"email\": \"nil@email.com\",\r\n    \"senha\": \"123456\",\r\n    \"ativo\": false\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/atualizar/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Fazer Update Endereço por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"cep\": \"13320271\",\r\n      \"rua\": \"Rua Rio Branco\",\r\n      \"numero\": \"1352\",\r\n      \"bairro\": \"Centro\",\r\n      \"cidade\": \"Salto\",\r\n      \"estado\": \"SP\",\r\n      \"tipo\": \"Secundario\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/atualizar/endereco/2/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Endereço no Usuario Existente por ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"cep\": \"13320271\",\r\n      \"rua\": \"Rua Rio Branco\",\r\n      \"numero\": \"1352\",\r\n      \"bairro\": \"Centro\",\r\n      \"cidade\": \"Salto\",\r\n      \"estado\": \"SP\",\r\n      \"tipo\": \"Secundario\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/biblioteca/usuario/adicionarendereco/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Endereço do Usuario por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/biblioteca/usuario/apagar/endereco/3/4"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

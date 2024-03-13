@@ -30,9 +30,9 @@ Terá uma aba chamada biblioteca apos a importação.
 ## ⚙️ Executando os testes
 
 No Postman biblioteca teremos tres conjuntos de pastas:
-Livros
-Emprestimos
-Usuario
+* Livros
+* Emprestimos
+* Usuario
 
 Comece pela aba livros:
 Existe dois Post para Cadastrar Lvros Novos - execute-os.

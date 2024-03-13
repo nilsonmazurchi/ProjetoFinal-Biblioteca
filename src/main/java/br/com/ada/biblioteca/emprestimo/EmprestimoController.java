@@ -19,41 +19,43 @@ import java.util.Optional;
 @RequestMapping("/biblioteca/emprestimo")
 public class EmprestimoController {
     private EmprestimoService service;
+
     @Autowired
-    public EmprestimoController(EmprestimoService service){
-        this.service =service;
+    public EmprestimoController(EmprestimoService service) {
+        this.service = service;
     }
-//    @GetMapping("/lista")
+
+    //    @GetMapping("/lista")
 //    public List<Livro> listarEmprestimos(){
 //        return service.pegarTodosEmprestimos();
 //    }
-@PostMapping("/novo")
-public ResponseEntity<Emprestimo> criarEmprestimo(
-        @RequestPart String nomeUsuario,
-        @RequestPart String emailUsuario,
-        @RequestPart String senhaUsuario,
-        @RequestPart String tituloLivro,
-        @RequestPart String autorLivro) {
+    @PostMapping("/novo")
+    public ResponseEntity<Emprestimo> criarEmprestimo(
+            @RequestPart String nomeUsuario,
+            @RequestPart String emailUsuario,
+            @RequestPart String senhaUsuario,
+            @RequestPart String tituloLivro,
+            @RequestPart String autorLivro) {
 
-    // Crie instâncias de Usuario e Livro usando os parâmetros recebidos
+        // Crie instâncias de Usuario e Livro usando os parâmetros recebidos
 
-    Usuario usuario = new Usuario();
-    usuario.setNome(nomeUsuario);
-    usuario.setEmail(emailUsuario);
-    usuario.setSenha(senhaUsuario);
+        Usuario usuario = new Usuario();
+        usuario.setNome(nomeUsuario);
+        usuario.setEmail(emailUsuario);
+        usuario.setSenha(senhaUsuario);
 
-    Livro livro = new Livro();
-    livro.setTitulo(tituloLivro);
-    livro.setAutor(autorLivro);
-    livro.setEmprestado(false);
+        Livro livro = new Livro();
+        livro.setTitulo(tituloLivro);
+        livro.setAutor(autorLivro);
+        livro.setEmprestado(false);
 
-    try {
-        Emprestimo emprestimo = service.emprestarLivro(nomeUsuario, emailUsuario, tituloLivro, autorLivro);
-        return new ResponseEntity<>(emprestimo, HttpStatus.CREATED);
-    } catch (UsuarioDuplicadoException e) {
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        try {
+            Emprestimo emprestimo = service.emprestarLivro(nomeUsuario, emailUsuario, tituloLivro, autorLivro);
+            return new ResponseEntity<>(emprestimo, HttpStatus.CREATED);
+        } catch (UsuarioDuplicadoException e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
-}
 
 //    @PutMapping("/atualizar/{id}")
 //    public ResponseEntity<String> atualizarLivro(@PathVariable Integer id, @RequestBody Livro livroAtualizado) {
@@ -108,6 +110,16 @@ public ResponseEntity<Emprestimo> criarEmprestimo(
         } catch (ParseException e) {
             // Trate o erro de parsing da data aqui
             return ResponseEntity.badRequest().body("Formato de data inválido. Use o formato yyyy-MM-dd.");
+        }
+    }
+
+    @GetMapping("/abertos")
+    public ResponseEntity<?> buscarEmprestimosEmAberto() {
+        List<Emprestimo> emprestimos = service.buscarEmprestimosEmAberto();
+        if (emprestimos.isEmpty()) {
+            return ResponseEntity.ok().body("Não há empréstimos pendentes no momento.");
+        } else {
+            return ResponseEntity.ok().body(emprestimos);
         }
     }
 }

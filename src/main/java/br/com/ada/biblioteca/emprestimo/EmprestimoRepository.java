@@ -14,5 +14,8 @@ public interface EmprestimoRepository extends CrudRepository<Emprestimo, Integer
     @Query("SELECT e.usuario FROM Emprestimo e WHERE e.dataDevolucao IS NULL")
     List<Usuario> findUsuariosComEmprestimosPendentes();
 
+    @Query("SELECT e FROM Emprestimo e WHERE e.dataDevolucao IS NULL")
+    List<Emprestimo> findAllEmprestimosEmAberto();
+
 
 }

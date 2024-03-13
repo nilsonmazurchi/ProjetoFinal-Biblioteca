@@ -54,9 +54,9 @@ Por ultimo dirija-se a aba Emprestimo:
 * Um Get para Listar Usuarios com Livros Pendentes,
 * um Put para desativar(inativar) um Usuario por ID,
 * Um Put para Devolução por ID,
-* um Put para Devoluçõa por ID e dataDevolução digitada.(esta para testar retorno quando colocamos uma data de devolução 
+* um Put para Devolução por ID e dataDevolução digitada.(esta para testar retorno quando colocamos uma data de devolução 
 superior a data prevista de retorno com calculo da multa)
-
+* um Get para buscar todos os emprestimos em aberto
 
 ## 🛠️ Construído com
 
@@ -85,4 +85,4 @@ Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://gi
 * Aos professores [Alex Facincani](https://github.com/facincani) e [Luiz Cardozo](https://github.com/lcrdz)  📢;
 * Obrigado por todo o conhecimento transmitido 📋;
 * E agora vamos comemorar 🍺;
-  
+* E continuar buscando uma oportunidade 🚶;

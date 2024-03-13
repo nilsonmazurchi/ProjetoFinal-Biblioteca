@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -121,5 +122,8 @@ public class EmprestimoService {
         return repository.save(emprestimo);
     }
 
+    public List<Emprestimo> buscarEmprestimosEmAberto() {
+        return repository.findAllEmprestimosEmAberto();
+    }
 
 }

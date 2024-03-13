@@ -35,26 +35,26 @@ No Postman biblioteca teremos tres conjuntos de pastas:
 * Usuario
 
 Comece pela aba livros:
-Existe dois Post para Cadastrar Lvros Novos - execute-os.
-Observe retorno na aba Response do Postman e verifique no Banco de Dados a criação dos livros.
-Existe também: um Get para Listar todos os livros cadastrados, um Put para fazer Update e um Delete para apgar um Livro.
+* Existe dois Post para Cadastrar Lvros Novos - execute-os.
+* Observe retorno na aba Response do Postman e verifique no Banco de Dados a criação dos livros.
+* Existe também: um Get para Listar todos os livros cadastrados, um Put para fazer Update e um Delete para apgar um Livro.
 
 Depois vá para aba Usuario:
-uma rota Post para cadastrar Usuario com 01 endereço e outra rota Post para cadastrar Usuario com dois ou mais endereços.
+* uma rota Post para cadastrar Usuario com 01 endereço e outra rota Post para cadastrar Usuario com dois ou mais endereços.
 (Observe retorno na aba Response do Postman e verifique no Banco de Dados a criação dos usuarios.)
-um Get para Listar todos os Usuarios e seus Endereços, 
-um Put para Fazer Update no usuario, 
-um Put para Fazer Update no Endereço do Usuario por ID, 
-um Post para Criar um novo Endereçono Usuario Existente por ID e Delete para apagar o Endereço do Usuario por ID.
+* um Get para Listar todos os Usuarios e seus Endereços, 
+* um Put para Fazer Update no usuario, 
+* um Put para Fazer Update no Endereço do Usuario por ID, 
+* um Post para Criar um novo Endereçono Usuario Existente por ID e Delete para apagar o Endereço do Usuario por ID.
 Nosso usuario não será deletado mas sim inativado
 
 Por ultimo dirija-se a aba Emprestimo:
-uma rota Post para Cadastrar Emprestimo por Dados no form-data, 
-um Get para Listar todos os Livros Disponiveis, 
-Um Get para Listar Usuarios com Livros Pendentes,
-um Put para desativar(inativar) um Usuario por ID,
-Um Put para Devolução por ID,
-um Put para Devoluçõa por ID e dataDevolução digitada.(esta para testar retorno quando colocamos uma data de devolução 
+* uma rota Post para Cadastrar Emprestimo por Dados no form-data, 
+* um Get para Listar todos os Livros Disponiveis, 
+* Um Get para Listar Usuarios com Livros Pendentes,
+* um Put para desativar(inativar) um Usuario por ID,
+* Um Put para Devolução por ID,
+* um Put para Devoluçõa por ID e dataDevolução digitada.(esta para testar retorno quando colocamos uma data de devolução 
 superior a data prevista de retorno com calculo da multa)
 
 
@@ -82,7 +82,7 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* *Nilson Mazurchi** - *Trabalho Inicial* - [Nilson Mazurch](https://github.com/nilsonmazurchi)
+* *Nilson Mazurchi** - *Trabalho Inicial* - [Nilson Mazurchi](https://github.com/nilsonmazurchi)
 
 ## 📄 Licença
 

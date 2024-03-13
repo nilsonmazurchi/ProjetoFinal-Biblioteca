@@ -83,5 +83,6 @@ Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://gi
 ## 🎁 Expressões de gratidão
 
 * Aos professores [Alex Facincani](https://github.com/facincani) e [Luiz Cardozo](https://github.com/lcrdz)  📢;
-* Obrigado por todo o conhecimento transmitido 🍺;
+* Obrigado por todo o conhecimento transmitido 📋;
+* E agora vamos comemorar 🍺;
   
